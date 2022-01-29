@@ -1,3 +1,3 @@
 # My Website
 
-Visit it via: https://DaBlincx.github.io
+Visit it: https://DaBlincx.github.io
