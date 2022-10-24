@@ -5,7 +5,8 @@ body {
     cursor: url("/_assets/images/cursors/oxygen/default.cur"), default;
 }
 
-button, a {
+button,
+a {
     cursor: url("/_assets/images/cursors/oxygen/pointer.cur"), pointer;
 }
 
@@ -20,6 +21,17 @@ h3 {
     position: absolute;
     top: 50%;
     width: 100%;
+}
+
+.content-background {
+    background: #111111;
+    border-radius: 15px;
+    margin: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 35px;
+    height: auto;
+    opacity: 90%;
 }
 
 .content-spacing {
@@ -345,6 +357,11 @@ footer .copyright {
     background: #66666633;
 }
 
+.intro-button-highlight p {
+    filter: brightness(150%);
+    /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;*/
+}
+
 /* project content styling */
 
 .project-content {
@@ -481,16 +498,6 @@ footer .copyright {
 
 /* project subsite styling */
 
-.content-background {
-    background: #111111;
-    border-radius: 15px;
-    margin: 100px;
-    margin-top: 50px;
-    padding: 35px;
-    height: auto;
-    opacity: 90%;
-}
-
 .content-project-heading {
     padding-bottom: 10px;
 }
@@ -607,10 +614,20 @@ footer .copyright {
     padding: 80px;
 }
 
-.error-content {
+/* 404 page styling */
+
+.error-heading {
     text-align: center;
 }
 
-.error-text-trdown {
-    transform: translate(0,50px);
+.error-heading h2 {
+    font-size: 90px;
+}
+
+.error-heading h3 {
+    font-size: 35px;
+}
+
+.error-content {
+    text-align: center;
 }
