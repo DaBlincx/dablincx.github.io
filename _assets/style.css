@@ -53,6 +53,7 @@ h3 {
     object-fit: cover;
     filter: blur(2px);
     -webkit-filter: blur(2px);
+    box-shadow: 0px 0px 10px #ffffff99;
 }
 
 .bg-img-fullsize {
@@ -64,6 +65,7 @@ h3 {
     object-fit: cover;
     filter: blur(3px);
     -webkit-filter: blur(3px);
+    box-shadow: 0px 0px 10px #ffffff99;
 }
 
 .content-heading {
@@ -199,6 +201,7 @@ nav ul li {
 /* footer styling */
 
 footer {
+    box-shadow: 0px 0px 10px #ffffff99;
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100%;
@@ -285,25 +288,34 @@ footer .copyright {
 /* intro here */
 
 .introd {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: #111111;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transform: translate(0, -25%);
+    box-shadow: 0px 0px 10px #ffffff99;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .intro-text {
+    box-shadow: 0px 0px 10px #ffffffaa;
     margin-top: 20px;
     padding-top: 20px;
     text-align: center;
     padding-bottom: 20px;
     margin-bottom: 30px;
-    background: #33333333;
+    background: #33333366;
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 20px;
@@ -311,7 +323,7 @@ footer .copyright {
 }
 
 .intro-text:hover {
-    background: #333333;
+    background: #33333399;
 }
 
 .intro-content {
@@ -332,7 +344,7 @@ footer .copyright {
 
 .intro-button {
     border: none;
-    background: #33333333;
+    background: #33333366;
     padding: 12px 30px;
     border-radius: 10px;
     font-weight: bold;
@@ -341,25 +353,18 @@ footer .copyright {
 }
 
 .intro-button:hover {
-    background: #333333;
+    box-shadow: 0px 0px 5px #ffffff;
+    background: #33333333;
 }
 
 .intro-button p {
+    text-shadow: 0px 0px 8px #ffffff;
     color: #ea1538;
     transition: .3s;
 }
 
 .intro-button:hover p {
     color: #ffffff;
-}
-
-.intro-button-highlight {
-    background: #66666633;
-}
-
-.intro-button-highlight p {
-    filter: brightness(150%);
-    /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;*/
 }
 
 /* project content styling */
@@ -617,6 +622,7 @@ footer .copyright {
 /* 404 page styling */
 
 .error-heading {
+    z-index: 0;
     text-align: center;
 }
 
