@@ -53,7 +53,6 @@ h3 {
     object-fit: cover;
     filter: blur(2px);
     -webkit-filter: blur(2px);
-    box-shadow: 0px 0px 10px #ffffff99;
 }
 
 .bg-img-fullsize {
@@ -65,7 +64,6 @@ h3 {
     object-fit: cover;
     filter: blur(3px);
     -webkit-filter: blur(3px);
-    box-shadow: 0px 0px 10px #ffffff99;
 }
 
 .content-heading {
@@ -169,13 +167,13 @@ nav ul li {
     position: absolute;
     align-items: center;
     transition: .4s;
+    padding: 15px;
+    padding-top: 0px;
 }
 
 .dropdown-content a {
     display: block;
-    padding-top: 20px;
-    padding-left: 15px;
-    padding-bottom: 1px;
+    padding-top: 15px;
 }
 
 .dropdown-content a:hover>.dropdown-content {
@@ -201,7 +199,6 @@ nav ul li {
 /* footer styling */
 
 footer {
-    box-shadow: 0px 0px 10px #ffffff99;
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100%;
@@ -288,24 +285,7 @@ footer .copyright {
 /* intro here */
 
 .introd {
-    box-shadow: 0px 0px 10px #ffffff99;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    background: #111111;
 }
 
 .intro-text {
@@ -358,12 +338,12 @@ footer .copyright {
 }
 
 .intro-button p {
-    text-shadow: 0px 0px 8px #ffffff;
     color: #ea1538;
     transition: .3s;
 }
 
 .intro-button:hover p {
+    text-shadow: 0px 0px 8px #ffffff;
     color: #ffffff;
 }
 
