@@ -110,6 +110,10 @@ h3 {
     padding-right: 3px;
 }
 
+.flag-bg {
+    background: linear-gradient(red 16.66%, orange 0 33.33%, yellow 0 50%, green 0 66.66%, blue 0 83.33%, indigo 0);
+}
+
 /* navbar styling */
 
 .navlink {
@@ -233,6 +237,17 @@ footer ul li {
 
 .footer-links li a:hover {
     color: #0c7f96;
+}
+
+footer .gay-button {
+    border-radius: 4px;
+    border: none;
+    padding: 2px;
+    background: linear-gradient(red 16.66%, orange 0 33.33%, yellow 0 50%, green 0 66.66%, blue 0 83.33%, indigo 0);
+}
+
+footer .gay-button p {
+    opacity: 0;
 }
 
 footer .footer-socials li a img {
@@ -651,4 +666,9 @@ footer .copyright {
 
 .docs-info {
     padding-left: 25px;
+}
+
+.gay-content {
+    padding: 20px;
+    text-align: center;
 }
