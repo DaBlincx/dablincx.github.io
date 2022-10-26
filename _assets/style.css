@@ -617,3 +617,38 @@ footer .copyright {
 .error-content {
     text-align: center;
 }
+
+/* docs styling */
+
+.docs-content {
+    padding: 50px;
+}
+
+.docs-table {
+    text-align: left;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    background-color: #222222;
+    border-radius: 15px;
+}
+
+.docs-row {
+    padding-bottom: 20px;
+}
+
+.docs-date {
+    width: 150px;
+    padding-right: 10px;
+}
+
+.docs-time {
+    width: 100px;
+    padding-right: 25px;
+    padding-left: 10px;
+}
+
+.docs-info {
+    padding-left: 25px;
+}
