@@ -558,6 +558,7 @@ footer .copyright {
     padding-top: 70px;
     padding-bottom: 10px;
     border-radius: 15px;
+    box-shadow: 2px 2px 4px #000000;
 }
 
 .contact-box-wrapper {
@@ -576,6 +577,9 @@ footer .copyright {
     text-align: center;
 }
 
+.contact-email {
+    background: #444444;
+}
 
 .contact-boxes img {
     height: 100px;
@@ -606,6 +610,10 @@ footer .copyright {
 
 .contact-button:hover {
     background: #555555;
+}
+
+.contact-email {
+    transform: scale(1.08);
 }
 
 /* impressum */
