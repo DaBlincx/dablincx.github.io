@@ -1,8 +1,24 @@
 /* global styling stuff */
 
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(119, 76, 193);
+    --pink: rgb(244, 143, 177);
+    --white: #ffffff;
+    --dark1: #111111;
+    --dark2: #222222;
+    --dark3: #333333;
+    --dark4: #444444;
+    --dark5: #555555;
+    --red1: #ea1538;
+    --cyan1: #0dcaf0;
+    --cyan2: #0c7f96;
+}
+
+
 body {
     min-width: 810px;
-    background-color: #111111;
+    background-color: var(--dark1);
     cursor: url("/_assets/images/cursors/oxygen/default.cur"), default;
 }
 
@@ -15,7 +31,7 @@ p,
 h1,
 h2,
 h3 {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .content-wrapper {
@@ -26,7 +42,7 @@ h3 {
 }
 
 .content-background {
-    background: #111111;
+    background: var(--dark1);
     border-radius: 15px;
     margin: 100px;
     margin-top: 50px;
@@ -94,17 +110,17 @@ h3 {
 }
 
 .link-deco {
-    color: #0dcaf0;
+    color: var(--cyan1);
     text-decoration: none;
     transition: .4s;
 }
 
 .link-deco:hover {
-    color: #0c7f96;
+    color: var(--cyan2);
 }
 
 .code-highlight {
-    background: #333333;
+    background: var(--dark3);
     font-family: monospace;
     border-radius: 2px;
     padding: 1px;
@@ -116,27 +132,46 @@ h3 {
     background: linear-gradient(red 16.66%, orange 0 33.33%, yellow 0 50%, green 0 66.66%, blue 0 83.33%, indigo 0);
 }
 
+@keyframes bg-pan {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+.copyright > .text-gradient-animated {
+    animation: bg-pan 3s linear infinite;
+    background: linear-gradient(90deg, var(--purple), var(--violet), var(--pink), var(--purple));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
 /* navbar styling */
 
 .navlink {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white);
     font-weight: bold;
     transition: .3s;
 }
 
 .navlink:hover {
-    color: #ea1538;
+    color: var(--red1);
     transition: .3s;
 }
 
 .logo {
-    color: #ffffff;
+    color: var(--white);
     font-size: 28px;
 }
 
 .colored-logo {
-    color: #ea1538;
+    color: var(--red1);
 }
 
 .logo-link {
@@ -208,7 +243,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100%;
-    background-color: #222222;
+    background-color: var(--dark2);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -232,13 +267,13 @@ footer ul li {
 }
 
 .footer-links li a {
-    color: #0dcaf0;
+    color: var(--cyan1);
     text-decoration: none;
     transition: .4s;
 }
 
 .footer-links li a:hover {
-    color: #0c7f96;
+    color: var(--cyan2);
 }
 
 footer .gay-button {
@@ -302,11 +337,11 @@ footer .copyright {
 /* intro here */
 
 .introd {
-    background: #111111;
+    background: var(--dark1);
 }
 
 .intro-text {
-    box-shadow: 0px 0px 10px #ffffffaa;
+    box-shadow: 0px 0px 10px var(--white)aa;
     margin-top: 20px;
     padding-top: 20px;
     text-align: center;
@@ -350,18 +385,18 @@ footer .copyright {
 }
 
 .intro-button:hover {
-    box-shadow: 0px 0px 5px #ffffff;
+    box-shadow: 0px 0px 5px var(--white);
     background: #33333333;
 }
 
 .intro-button p {
-    color: #ea1538;
+    color: var(--red1);
     transition: .3s;
 }
 
 .intro-button:hover p {
-    text-shadow: 0px 0px 8px #ffffff;
-    color: #ffffff;
+    text-shadow: 0px 0px 8px var(--white);
+    color: var(--white);
 }
 
 /* project content styling */
@@ -429,10 +464,10 @@ footer .copyright {
 .view-proj-button1 {
     margin-top: 20px;
     border: none;
-    background: #ea1538;
+    background: var(--red1);
     padding: 12px 30px;
     border-radius: 10px;
-    color: #ffffff;
+    color: var(--white);
     font-weight: bold;
     font-size: 15px;
     transition: .3s;
@@ -445,10 +480,10 @@ footer .copyright {
 .view-proj-button2 {
     margin-top: 20px;
     border: none;
-    background: #ea1538;
+    background: var(--red1);
     padding: 12px 30px;
     border-radius: 10px;
-    color: #ffffff;
+    color: var(--white);
     font-weight: bold;
     font-size: 15px;
     transition: .3s;
@@ -488,7 +523,7 @@ footer .copyright {
 
 .image-desc-text {
     font-size: 10px;
-    color: #333333;
+    color: var(--dark3);
 }
 
 .about-spaced-text {
@@ -503,7 +538,7 @@ footer .copyright {
 
 .numbered-steps {
     list-style: decimal;
-    color: #ffffff;
+    color: var(--white);
     padding-left: 25px;
 }
 
@@ -517,25 +552,25 @@ footer .copyright {
 
 .project-download-source {
     border: none;
-    background: #0dcaf0;
+    background: var(--cyan1);
     padding: 12px 30px;
     border-radius: 10px;
-    color: #ffffff;
+    color: var(--white);
     font-weight: bold;
     font-size: 15px;
     transition: .3s;
 }
 
 .project-download-source:hover {
-    background: #0c7f96;
+    background: var(--cyan2);
 }
 
 .project-download-exe {
     border: none;
-    background: #ea1538;
+    background: var(--red1);
     padding: 12px 30px;
     border-radius: 10px;
-    color: #ffffff;
+    color: var(--white);
     font-weight: bold;
     font-size: 15px;
     transition: .3s;
@@ -548,7 +583,7 @@ footer .copyright {
 /* contact */
 
 .contact-boxes {
-    background: #333333;
+    background: var(--dark3);
     height: 300px;
     margin: 30px;
     margin-top: 60px;
@@ -577,7 +612,7 @@ footer .copyright {
 }
 
 .contact-email {
-    background: #444444;
+    background: var(--dark4);
 }
 
 .contact-boxes img {
@@ -596,7 +631,7 @@ footer .copyright {
     width: fit-content;
     margin-top: 30px;
     border: none;
-    background: #222222;
+    background: var(--dark2);
     border-radius: 10px;
     font-weight: bold;
     font-size: 15px;
@@ -608,7 +643,7 @@ footer .copyright {
 }
 
 .contact-button:hover {
-    background: #555555;
+    background: var(--dark5);
 }
 
 .contact-email {
@@ -652,7 +687,7 @@ footer .copyright {
     padding: 20px;
     padding-bottom: 0px;
     margin-bottom: 20px;
-    background-color: #222222;
+    background-color: var(--dark2);
     border-radius: 15px;
 }
 
