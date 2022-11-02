@@ -20,10 +20,15 @@
                     Da<span class="colored-logo">Blincx</span>
                 </h2>
             </a>
-            <ul>
+            <ul class="topnav" id="navbar-menu">
                 <li>
                     <a class="navlink" href="/about">
                         About
+                    </a>
+                </li>
+                <li>
+                    <a class="navlink" href="/contact">
+                        Contact
                     </a>
                 </li>
                 <li>
@@ -37,9 +42,10 @@
                         </div>
                     </div>
                 </li>
-                <li>
-                    <a class="navlink" href="/contact">
-                        Contact
+                <li class="icon">
+                    <a class="navlink" href="javascript:void(0);"
+                        onclick="revColMenu()">
+                        <i class="fa fa-bars menu-icon"></i>
                     </a>
                 </li>
             </ul>
@@ -1011,6 +1017,16 @@
                         </td>
                         <td class="docs-info docs-row">
                             <p>Changed (almost all) manual color values to css variables.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="docs-date docs-row">
+                        </td>
+                        <td class="docs-time docs-row">
+                            <p>21:00 GMT+2</p>
+                        </td>
+                        <td class="docs-info docs-row">
+                            <p>Added mobile nav menu support. Changes, if page-width is under 810px.</p>
                         </td>
                     </tr>
                 </table>
