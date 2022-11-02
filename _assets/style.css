@@ -17,7 +17,6 @@
 
 
 body {
-    min-width: 810px;
     background-color: var(--dark1);
     cursor: url("/_assets/images/cursors/oxygen/default.cur"), default;
 }
@@ -35,7 +34,6 @@ h3 {
 }
 
 .content-wrapper {
-    min-width: 810px;
     position: absolute;
     top: 50%;
     width: 100%;
