@@ -1,1 +1,5 @@
 #30c6f9 <- new main color ( dodger blue )
+
+cool design: https://adityayads.vercel.app
+
+also maybe host on vercel
