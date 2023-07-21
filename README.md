@@ -1,1 +1,0 @@
-[look at my website idk](https://DaBlincx.github.io)
