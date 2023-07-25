@@ -10,7 +10,8 @@ export default function Home() {
                 position: 'relative',
             }
         }>
-            <h1 className="text-4xl font-bold text-center text-white" style={{
+            <h1 style={{
+                color: '#FFFFFF',
                 fontFamily: 'Inter',
                 top: '50%',
                 position: 'absolute',
