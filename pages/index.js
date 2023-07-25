@@ -19,7 +19,7 @@ export default function Home() {
                 transform: 'translate(-50%, -50%)',
                 fontSize: '4rem',
             }}>
-                hello cool people, me is editing this website
+                hello cool people, me is editing this website (also i gotta test smth)
             </h1>
         </div>
   )
