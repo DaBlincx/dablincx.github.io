@@ -16,7 +16,8 @@ export default function Home() {
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
-                width: '100%',
+                width: '100vw',
+                height: '100vh',
             }}>
                 <h1 style={{
                     color: '#FFFFFF',
@@ -34,5 +35,5 @@ export default function Home() {
                 />
             </div>
         </div>
-  )
+    )
 }
