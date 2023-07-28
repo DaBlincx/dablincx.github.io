@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+// set images.unoptimized to true to disable image optimization
+
 const nextConfig = {
     reactStrictMode: true,
     images: {
@@ -10,6 +12,7 @@ const nextConfig = {
                 pathname: '/attachments/**/**/**',
             }
         ],
+        unoptimized: true,
     }
 }
 

@@ -9,7 +9,7 @@
     "export": "next build && next export",
     "lint": "next lint",
     "gh-deploy": "gh-pages -d out",
-    "fulldeploy": "npm run export && git commit"
+    "fulldeploy": "npm run export && gh-pages -d out"
   },
   "dependencies": {
     "eslint": "8.45.0",

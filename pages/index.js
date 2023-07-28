@@ -23,7 +23,8 @@ export default function Home() {
                     fontFamily: 'Inter',
                     fontSize: '4rem',
                 }}>
-                    hello cool people, me is editing this website (also i gotta test smth)
+                    hello cool people, me is editing this website (also i gotta test smth)<br/>
+                    :3
                 </h1>
                 <Image
                     src="https://media.discordapp.net/attachments/1124714078162653244/1131305790079254598/bombcat.gif"
