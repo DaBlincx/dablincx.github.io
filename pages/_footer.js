@@ -28,17 +28,17 @@ function Footer() {
                     <div style={{
                         marginLeft: '1rem',
                     }}>
-                        <Link href="/contact">Contact</Link>
+                        <Link className="styled-link" href="/contact">Contact</Link>
                     </div>
                     <div style={{
                         marginLeft: '1rem',
                     }}>
-                        <Link href="/about">About</Link>
+                        <Link className="styled-link" href="/about">About</Link>
                     </div>
                     <div style={{
                         marginLeft: '1rem',
                     }}>
-                        <Link href="/imprint">Imprint</Link>
+                        <Link className="styled-link" href="/imprint">Imprint</Link>
                     </div>
                 </div>
             </div>
