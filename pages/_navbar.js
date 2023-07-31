@@ -1,45 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function NavBar() {
-    // navbar with projects, contact, about, and home
+function NavBar({ bgColor }) {
+    if (bgColor == null) {
+        bgColor = 'transparent';
+    }
     return (
         <div style={{
-            position: 'absolute',
-            top: '0',
-            right: '0',
-            background: 'transparent',
+            background: bgColor,
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            justifyContent: 'right',
             alignItems: 'right',
             padding: '1rem 1.5rem',
+            paddingRight: '1.5rem',
+            //what the fuck is this god damn
         }}>
             <div style={{
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                fontSize: '1.5rem',
+                fontSize: '1.3rem',
                 color: '#FFFFFF',
             }}>
-                <div style={{
-                }}>
+                <div className="navbar-link">
                     <Link href="/">Home</Link>
                 </div>
-                <div style={{
-                    marginLeft: '1rem',
-                }}>
+                <div className="navbar-link">
                     <Link href="/projects">Projects</Link>
                 </div>
-                <div style={{
-                    marginLeft: '1rem',
-                }}>
+                <div className="navbar-link">
                     <Link href="/contact">Contact</Link>
                 </div>
-                <div style={{
-                    marginLeft: '1rem',
-                }}>
+                <div className="navbar-link">
                     <Link href="/about">About</Link>
                 </div>
             </div>

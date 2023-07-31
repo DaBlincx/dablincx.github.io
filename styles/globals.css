@@ -97,6 +97,16 @@ a {
     }
 }
 
+.navbar-link {
+    margin-left: 1rem;
+    border: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-link:hover {
+    border-bottom-color: #00ddff;
+}
+
 .error-404-link {
     color: #00ddff;
     text-decoration: none;
