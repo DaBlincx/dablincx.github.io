@@ -11,7 +11,7 @@
         "gh-deploy": "gh-pages -d out",
         "fulldeploy": "npm run export && gh-pages -d out",
         "commitanddeploy": "git add . && git commit -m \"full deploy\" && npm run fulldeploy",
-        "localdeploy": "npm run export && http-server out -p 80"
+        "localdeploy": "npm run export && serve -s out -l 8080"
     },
     "dependencies": {
         "eslint": "8.45.0",
