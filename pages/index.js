@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import NavBar from './_navbar'
 import Footer from './_footer'
+import RainContainer from './_rainContainer'
 
 export default function Home() {
     return (
@@ -9,8 +10,9 @@ export default function Home() {
             <div style={{
                 width: '100%',
                 height: '100vh',
-                background: 'linear-gradient(180deg, #666666 0%, rgba(0,0,0,0.5) 100%)',
+                background: 'linear-gradient(180deg, var(--background) 0%, #776666 100%)',
             }}>
+                <RainContainer />
                 <div style={{
                     position: 'absolute',
                     top: '50%',

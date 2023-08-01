@@ -28,9 +28,9 @@ function NavBar({ bgColor }) {
             <div id="navbar" className="" style={{
                 position: 'fixed',
                 top: '0',
-                right: '-10%',
+                right: '-350px',
                 height: '100vh',
-                width: '10%',
+                width: '350px',
                 background: '#000000',
                 display: 'flex',
                 justifyContent: 'right',
@@ -61,14 +61,14 @@ function NavBar({ bgColor }) {
                             Projects
                         </div>
                     </Link>
-                    <Link href="/contact">
-                        <div className={isActive("/contact")}>
-                            Contact
-                        </div>
-                    </Link>
                     <Link href="/about">
                         <div className={isActive("/about")}>
                             About
+                        </div>
+                    </Link>
+                    <Link href="/contact">
+                        <div className={isActive("/contact")}>
+                            Contact
                         </div>
                     </Link>
                 </div>

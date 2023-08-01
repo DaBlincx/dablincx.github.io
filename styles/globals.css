@@ -126,33 +126,40 @@ a {
     content: '>';
 }
 
+.navbar-menu-arrow {
+    transform: rotate(90deg);
+}
+
 .navbar-menu:hover {
     border-bottom-color: var(--accent);
     cursor: pointer;
 }
 
 .navbar-menu:hover .navbar-menu-arrow {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
 }
 
 .navbar-link {
     border: 3px solid transparent;
-    margin: 1.5rem 0.5rem;
+    margin: 1.75rem 0.5rem;
     border-left-color: var(--accent);
     padding: 1.5rem 1rem;
+    background: #ffffff1b;
+    border-radius: 0 10px 10px 0;
     transition: 0.2s;
 }
 
 .navbar-link:hover {
-    border-left-color: transparent;
+    margin-left: 1.5rem;
+    background: #ffffff33;
 }
 
 .navlink-current {
     border-left-color: var(--text);
 }
 
-.navlink-current:hover {
-    border-left-color: transparent;
+.rain-container-box {
+    overflow: hidden;
 }
 
 .error-404-link {

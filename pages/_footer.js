@@ -5,10 +5,11 @@ function Footer() {
     return (
         <div style={{
             width: '100%',
-            height: '10vh',
+            height: '15vh',
             background: '#000000',
             display: 'flex',
             flexDirection: 'column',
+            zIndex: '100',
         }}>
             <div style={{
                 display: 'flex',
@@ -16,6 +17,7 @@ function Footer() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 padding: '1rem 1.5rem',
+                marginTop: '2.5vh',
             }}>
                 <div style={{
                     display: 'flex',
@@ -25,9 +27,7 @@ function Footer() {
                     fontSize: '1.1rem',
                     color: '#FFFFFF',
                 }}>
-                    <div style={{
-                        marginLeft: '1rem',
-                    }}>
+                    <div>
                         <Link className="styled-link" href="/contact">Contact</Link>
                     </div>
                     <div style={{
@@ -56,9 +56,7 @@ function Footer() {
                     alignItems: 'center',
                     fontSize: '1rem',
                 }}>
-                    <div style={{
-                        marginLeft: '1rem',
-                    }}>
+                    <div>
                         <Link href="https://github.com/DaBlincx">
                             <Image src="/github.svg" width={30} height={30} style={{
                                 color: '#FFFFFF',
@@ -66,7 +64,7 @@ function Footer() {
                         </Link>
                     </div>
                     <div style={{
-                        marginLeft: '1rem',
+                        marginLeft: '1.5rem',
                     }}>
                         <Link href="https://www.linkedin.com/in/emily-herrmann-288a57284/">
                             <Image src="/linkedin.svg" width={30} height={30} style={{
