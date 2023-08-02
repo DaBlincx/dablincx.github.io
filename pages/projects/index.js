@@ -1,19 +1,24 @@
 import NavBar from "../_navbar"
 import Footer from "../_footer"
 import Link from "next/link"
+import ProjectElement from "./_projectElement"
 
 export default function projects() {
     return (
         <div>
             <NavBar/>
-            <div style={{
-                width: '100%',
-                height: '100vh',
-                background: 'linear-gradient(180deg, #00ddff 0%, #000000 100%)',
-            }}>
-                Projects
-
-                <Link href="/projects/meme-video-generator">meme video ghen</Link>
+            <div className="projects-heading-background">
+                <div className="projects-heading-container">
+                    <div className="projects-heading-title">
+                        projects
+                    </div>
+                    <div className="projects-heading-subtitle">
+                        take a look at some of my work!
+                    </div>
+                </div>
+            </div>
+            <div className="projects-container">
+                content
             </div>
             <Footer />
         </div>

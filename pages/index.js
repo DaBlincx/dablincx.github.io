@@ -9,11 +9,11 @@ export default function Home() {
             <NavBar />
             <div className='index-background'>
                 <RainContainer />
-                <div className='index-text-container'>
-                    <div className='index-text-title'>
+                <div className='index-heading-container'>
+                    <div className='index-heading-title'>
                         dablincx
                     </div>
-                    <div className='index-text-subtitle'>
+                    <div className='index-heading-subtitle'>
                         web design & software development
                     </div>
                 </div>

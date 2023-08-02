@@ -20,7 +20,7 @@ function Footer() {
                     <div>
                         <Link href="https://github.com/DaBlincx">
                             <Image
-                                src="/github.svg"
+                                src="/media/github.svg"
                                 width={30}
                                 height={30}
                                 style={{ color: '#FFFFFF' }}
@@ -31,7 +31,7 @@ function Footer() {
                     <div style={{ marginLeft: '1.5rem' }}>
                         <Link href="https://www.linkedin.com/in/emily-herrmann-288a57284/">
                             <Image
-                                src="/linkedin.svg"
+                                src="/media/linkedin.svg"
                                 width={30}
                                 height={30}
                                 style={{ color: '#FFFFFF' }}
