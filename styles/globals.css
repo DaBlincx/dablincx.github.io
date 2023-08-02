@@ -95,7 +95,7 @@ a {
     transition: 0.5s;
     z-index: 2;
     font-size: 1.3rem;
-    color: '#FFFFFF',
+    color: var(--text);
 }
 
 #navbar.navbar-open {
@@ -180,8 +180,75 @@ a {
     border-left-color: var(--text);
 }
 
+.footer-main {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.footer-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-pagelinks-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+}
+
+.footer-offpagelinks-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.index-background {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom left, var(--background) 0%, #776666 100%);
+    color: var(--text)
+}
+
+.index-text-container {
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.index-text-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+.index-text-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 .rain-container-box {
     overflow: hidden;
+    width: 40%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .error-404-link {

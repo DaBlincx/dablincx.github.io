@@ -7,7 +7,7 @@ function RainContainer({ createSquare }) {
     useEffect(() => {
         const rainContainer = rainContainerRef.current;
         const minSize = 10;
-        const maxSize = 50;
+        const maxSize = 40;
 
         const dopletCounterDisplay = document.createElement('div');
         dopletCounterDisplay.style.color = 'white';
@@ -33,12 +33,10 @@ function RainContainer({ createSquare }) {
 
             square.style.width = `${size}px`;
             square.style.height = `${size}px`;
-            square.style.border = '2px solid white';
             square.style.position = 'absolute';
             square.style.top = `-${size*2}px`;
             square.style.left = `${(Math.random() * 100) - offset}%`;
             square.style.background = 'white';
-            square.style.zIndex = '50'
 
             rainContainer.appendChild(square);
 
@@ -80,15 +78,7 @@ function RainContainer({ createSquare }) {
     }, [createSquare]);
 
     return (
-        <div className='rain-container-box' style={{
-            width: '40%',
-            height: '100vh',
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            zIndex: '50'
-            
-        }}>
+        <div className='rain-container-box'>
             <div ref={rainContainerRef} />
         </div>
     );
