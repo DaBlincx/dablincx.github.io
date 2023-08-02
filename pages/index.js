@@ -10,7 +10,7 @@ export default function Home() {
             <div style={{
                 width: '100%',
                 height: '100vh',
-                background: 'linear-gradient(180deg, var(--background) 0%, #776666 100%)',
+                background: 'linear-gradient(to bottom left, var(--background) 0%, #776666 100%)',
             }}>
                 <RainContainer />
                 <div style={{

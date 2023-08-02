@@ -91,12 +91,16 @@ a {
     right: 1rem;
     transition: 0.2s;
     transition: 0.5s;
-    padding: 1.75rem;
+    margin: 1.25rem 2.5rem;
+    padding: 0.25rem 0.5rem;
     opacity: 1;
+    border: 3px solid transparent;
+    transition: 0.2s;
 }
 
 #navbar-toggle:hover {
     cursor: pointer;
+    border-bottom-color: var(--accent);
 }
 
 #navbar.navbar-open ~ #navbar-toggle {
@@ -106,9 +110,9 @@ a {
 .navbar-menu {
     border: 3px solid transparent;
     margin: 1.5rem 0.5rem;
+    margin-top: 0rem;
     border-bottom-color: var(--text);
     padding: 1.5rem 1rem;
-    padding-top: 0rem;
     transition: 0.2s;
     display: flex;
     flex-direction: row;
