@@ -80,6 +80,24 @@ a {
     border-bottom-color: var(--accent);
 }
 
+#navbar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100vh;
+    background: var(--background);
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    padding: 1rem 1.5rem;
+    padding-right: 1.5rem;
+    transition: 0.5s;
+    z-index: 2;
+    font-size: 1.3rem;
+    color: '#FFFFFF',
+}
+
 #navbar.navbar-open {
     right: 0% !important;
 }
