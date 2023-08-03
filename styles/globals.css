@@ -182,20 +182,13 @@ a {
 }
 
 .footer-main {
-    position: relative;
     width: 100%;
     height: 15vh;
     background: var(--background);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 20;
-}
-
-.footer-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .footer-pagelinks-container {
@@ -217,7 +210,6 @@ a {
 }
 
 .index-background {
-    width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom left, var(--background) 0%, #776666 100%);
     color: var(--text)
@@ -283,7 +275,7 @@ a {
 
 .projects-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -291,6 +283,41 @@ a {
     flex-wrap: wrap;
     padding: 1rem 1.5rem;
     background: linear-gradient(to bottom right, var(--background) 0%, var(--accent) 100%);
+}
+
+.project-element-container {
+    width: 30vw;
+    height: 60vh;
+    min-width: 720px;
+    max-width: 1000px;
+    margin: 2rem;
+    padding: 4rem;
+    background: #ffffff1b;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    background: #ffffff11;
+    box-shadow: 5px 5px 5px 0px #00000077;
+}
+
+.project-element-image-container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-element-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.project-element-title-link {
+    border-bottom: 3px solid;
 }
 
 .error-404-link {

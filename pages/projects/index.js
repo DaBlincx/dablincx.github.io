@@ -18,7 +18,36 @@ export default function projects() {
                 </div>
             </div>
             <div className="projects-container">
-                content
+                <ProjectElement
+                    title="dablincx.dev"
+                    description="This website! I built it using Next.js, a React framework."
+                    imagelink="/media/github.svg"
+                    link="/"
+                />
+                <ProjectElement
+                    title="dablincx.dev"
+                    description="This website! I built it using Next.js, a React framework."
+                    imagelink="/media/github.svg"
+                    link="/"
+                />
+                <ProjectElement
+                    title="dablincx.dev"
+                    description="This website! I built it using Next.js, a React framework."
+                    imagelink="/media/github.svg"
+                    link="/"
+                />
+                <ProjectElement
+                    title="dablincx.dev"
+                    description="This website! I built it using Next.js, a React framework."
+                    imagelink="/media/github.svg"
+                    link="/"
+                />
+                <ProjectElement
+                    title="dablincx.dev"
+                    description="This website! I built it using Next.js, a React framework."
+                    iframelink="/"
+                    link="/"
+                />
             </div>
             <Footer />
         </div>
