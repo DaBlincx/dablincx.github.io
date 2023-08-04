@@ -122,7 +122,7 @@ a {
     border-bottom-color: var(--accent);
 }
 
-#navbar.navbar-open ~ #navbar-toggle {
+#navbar.navbar-open~#navbar-toggle {
     opacity: 0;
 }
 
@@ -183,7 +183,7 @@ a {
 
 .footer-main {
     width: 100%;
-    height: 15vh;
+    height: 200px;
     background: var(--background);
     display: flex;
     justify-content: center;
@@ -282,23 +282,82 @@ a {
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 1.5rem;
-    background: linear-gradient(to bottom right, var(--background) 0%, var(--accent) 100%);
+    background: linear-gradient(to bottom right, var(--background) 0%, var(--secondary) 100%);
 }
 
 .project-element-container {
+    position: relative;
     width: 30vw;
-    height: 60vh;
+    height: 72vh;
     min-width: 720px;
     max-width: 1000px;
     margin: 2rem;
     padding: 4rem;
     background: #ffffff1b;
-    border-radius: 20px;
     justify-content: center;
     align-items: center;
     transition: 0.2s;
     background: #ffffff11;
+    border: 1px solid var(--tertiary);
     box-shadow: 5px 5px 5px 0px #00000077;
+}
+
+/* windows 10 style window titlebar */
+
+.project-element-windowbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background: var(--tertiary);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.project-element-windowbar-container > * {
+    width: 48px;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.project-element-windowbar-container > *:hover {
+    background: #ffffff1b;
+}
+
+.project-element-windowbar-close:hover {
+    background: #ff0000;
+}
+
+.project-element-windowbar-minimize .minimize-icon {
+    width: 10px;
+    height: 1px;
+    background: var(--text);
+    transition: 0.2s;
+}
+
+.project-element-windowbar-maximize .maximize-icon {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--text);
+    transition: 0.2s;
+}
+
+.project-element-windowbar-close .close-icon {
+    transform: translateY(-3px);
+    font-size: 1.6rem;
+    font-weight: 1;
+    color: var(--text);
+}
+
+.project-element-windowbar-close .close-icon::before {
+    content: "\00d7";
 }
 
 .project-element-image-container {
@@ -310,14 +369,60 @@ a {
     align-items: center;
 }
 
+.project-element-image {
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    max-height: 100%;
+    object-fit: scale-down;
+    transition: 0.2s;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0px #00000077;
+}
+
 .project-element-title {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    padding-top: 2rem;
 }
 
 .project-element-title-link {
     border-bottom: 3px solid;
+}
+
+.project-element-description {
+    font-size: 1.25rem;
+}
+
+.project-element-viewmore {
+    width: fit-content;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--tertiary);
+    transition: 0.2s;
+    text-shadow: 0px 0px 4px #000000;
+}
+
+.project-element-viewmore-link {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-element-viewmore-button-arrows {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.2rem;
+    margin-left: -0.75rem;
+    object-fit: contain;
+    transition: 0.2s;
+    transform: scale(0);
+}
+
+.project-element-viewmore:hover .project-element-viewmore-button-arrows {
+    margin-left: 0.5rem;
+    transform: scale(1);
 }
 
 .error-404-link {

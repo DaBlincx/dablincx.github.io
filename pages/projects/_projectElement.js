@@ -1,19 +1,57 @@
 import Link from "next/link"
 import Image from "next/image"
 
-function ProjectElement({ title, description, imagelink, iframelink, link }) {
-    // if no imagelink is given, do not show the image container
-    const imageContainer = imagelink ? (
+function WindowBar({ linkurl }) {
+    return (
+        <div className="project-element-windowbar-container">
+            <div className="project-element-windowbar-minimize">
+                <div className="minimize-icon"></div>
+            </div>
+            <div className="project-element-windowbar-maximize" onClick={
+                () => {
+                    window.open(linkurl, '_blank');
+                }
+            }>
+                <div className="maximize-icon"></div>
+            </div>
+            <div className="project-element-windowbar-close">
+                <div className="close-icon"></div>
+            </div>
+        </div>
+    )
+}
+
+function ViewMoreButton({ linkurl }) {
+    return (
+        <div className="project-element-viewmore">
+            <Link href={linkurl} className="project-element-viewmore-link">
+                <div className="project-element-viewmore-button">
+                    View More
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="project-element-viewmore-button-arrows">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 12-6-6m6 6-6 6m6-6H5"/>
+                </svg>
+            </Link>
+        </div>
+    )
+}
+
+function ImageContainer({ imagelink, title }) {
+    return imagelink ? (
         <div className="project-element-image-container">
             <Image
+                className="project-element-image"
                 src={imagelink}
-                width={400}
-                height={300}
+                width={3000}
+                height={3000}
                 alt={title}
             />
         </div>
     ) : null;
-    const iframeContainer = iframelink ? (
+}
+
+function IframeContainer({ iframelink, title }) {
+    return iframelink ? (
         <div className="project-element-image-container">
             <iframe
                 src={iframelink}
@@ -23,10 +61,14 @@ function ProjectElement({ title, description, imagelink, iframelink, link }) {
             />
         </div>
     ) : null;
+}
+
+function ProjectElement({ title, description, imagelink, iframelink, link }) {
     return (
-        <div className="project-element-container">
-            {imageContainer}
-            {iframeContainer}
+        <div className="project-element-container" >
+            <WindowBar linkurl={link}/>
+            <ImageContainer imagelink={imagelink} title={title} />
+            <IframeContainer iframelink={iframelink} title={title} />
             <div className="project-element-text-container">
                 <div className="project-element-title">
                     <Link className="project-element-title-link" href={link}>
@@ -36,13 +78,7 @@ function ProjectElement({ title, description, imagelink, iframelink, link }) {
                 <div className="project-element-description">
                     {description}
                 </div>
-                <div className="project-element-viewmore">
-                    <Link href={link}>
-                        <div className="project-element-viewmore-button">
-                            View More
-                        </div>
-                    </Link>
-                </div>
+                <ViewMoreButton linkurl={link}/>
             </div>
         </div>
     )
