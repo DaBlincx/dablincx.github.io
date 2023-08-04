@@ -29,7 +29,7 @@ function ViewMoreButton({ linkurl }) {
                     View More
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="project-element-viewmore-button-arrows">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 12-6-6m6 6-6 6m6-6H5"/>
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="m19 12-6-6m6 6-6 6m6-6H5"/>
                 </svg>
             </Link>
         </div>
