@@ -1,7 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
+import React, { useState } from 'react'
 
-function WindowBar({ linkurl }) {
+function WindowBar({ linkurl, handleCloseFunction }) {
+    function handleClose() {
+        handleCloseFunction();
+    }
+
     return (
         <div className="project-element-windowbar-container">
             <div className="project-element-windowbar-minimize">
@@ -14,7 +19,11 @@ function WindowBar({ linkurl }) {
             }>
                 <div className="maximize-icon"></div>
             </div>
-            <div className="project-element-windowbar-close">
+            <div className="project-element-windowbar-close" onClick={
+                () => {
+                    handleClose();
+                }
+            }>
                 <div className="close-icon"></div>
             </div>
         </div>
@@ -64,22 +73,30 @@ function IframeContainer({ iframelink, title }) {
 }
 
 function ProjectElement({ title, description, imagelink, iframelink, link }) {
+    const [isVisible, setIsVisible] = useState(true);
+    function handleClose() {
+        setIsVisible(false);
+    };
     return (
-        <div className="project-element-container" >
-            <WindowBar linkurl={link}/>
-            <ImageContainer imagelink={imagelink} title={title} />
-            <IframeContainer iframelink={iframelink} title={title} />
-            <div className="project-element-text-container">
-                <div className="project-element-title">
-                    <Link className="project-element-title-link" href={link}>
-                        {title}
-                    </Link>
+        <div>
+            {isVisible &&
+                <div div className = "project-element-container" >
+                    <WindowBar linkurl={link} handleCloseFunction={handleClose} />
+                    <ImageContainer imagelink={imagelink} title={title} />
+                    <IframeContainer iframelink={iframelink} title={title} />
+                    <div className="project-element-text-container">
+                        <div className="project-element-title">
+                            <Link className="project-element-title-link" href={link}>
+                                {title}
+                            </Link>
+                        </div>
+                        <div className="project-element-description">
+                            {description}
+                        </div>
+                        <ViewMoreButton linkurl={link}/>
+                    </div>
                 </div>
-                <div className="project-element-description">
-                    {description}
-                </div>
-                <ViewMoreButton linkurl={link}/>
-            </div>
+            }
         </div>
     )
 }
