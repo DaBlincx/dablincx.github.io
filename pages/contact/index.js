@@ -1,5 +1,5 @@
-import NavBar from "../_navbar"
-import Footer from "../_footer"
+import NavBar from '@/components/_navbar'
+import Footer from '@/components/_footer'
 
 export default function projects() {
     return (

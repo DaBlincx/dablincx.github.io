@@ -59,20 +59,7 @@ function ImageContainer({ imagelink, title }) {
     ) : null;
 }
 
-function IframeContainer({ iframelink, title }) {
-    return iframelink ? (
-        <div className="project-element-image-container">
-            <iframe
-                src={iframelink}
-                width="100%"
-                height="100%"
-                alt={title}
-            />
-        </div>
-    ) : null;
-}
-
-function ProjectElement({ title, description, imagelink, iframelink, link }) {
+function ProjectElement({ title, description, imagelink, link }) {
     const [isVisible, setIsVisible] = useState(true);
     function handleClose() {
         setIsVisible(false);
@@ -83,7 +70,6 @@ function ProjectElement({ title, description, imagelink, iframelink, link }) {
                 <div div className = "project-element-container" >
                     <WindowBar linkurl={link} handleCloseFunction={handleClose} />
                     <ImageContainer imagelink={imagelink} title={title} />
-                    <IframeContainer iframelink={iframelink} title={title} />
                     <div className="project-element-text-container">
                         <div className="project-element-title">
                             <Link className="project-element-title-link" href={link}>

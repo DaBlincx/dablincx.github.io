@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import NavBar from './_navbar'
-import Footer from './_footer'
-import RainContainer from './_rainContainer'
+import NavBar from '@/components/_navbar'
+import Footer from '@/components/_footer'
+import RainContainer from '@/components/_rainContainer'
 
 export default function Home() {
     return (

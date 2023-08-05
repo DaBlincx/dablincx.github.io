@@ -7,9 +7,8 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'media.discordapp.net',
-                port: '',
-                pathname: '/attachments/**/**/**',
+                hostname: 'opengraph.githubassets.com',
+                port: ''
             }
         ],
         unoptimized: true,

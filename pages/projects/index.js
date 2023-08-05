@@ -1,7 +1,8 @@
-import NavBar from "../_navbar"
-import Footer from "../_footer"
+
+import NavBar from '@/components/_navbar'
+import Footer from '@/components/_footer'
 import Link from "next/link"
-import ProjectElement from "./_projectElement"
+import ProjectElement from "@/components/_projectElement"
 
 export default function projects() {
     return (
@@ -19,16 +20,16 @@ export default function projects() {
             </div>
             <div className="projects-container">
                 <ProjectElement
-                    title="dablincx.dev"
-                    description="This website! I built it using Next.js, a React framework."
-                    imagelink="/media/github.svg"
-                    link="/"
+                    title={"dablincx.dev"}
+                    description={"This website! I built it using Next.js, a React framework."}
+                    imagelink={"/media/github.svg"}
+                    link={"https://dablincx.dev"}
                 />
                 <ProjectElement
-                    title="Meme Video Generator"
-                    description="Automatically generates almost youtube-ready meme videos using MoviePy."
-                    imagelink="https://opengraph.githubassets.com/9282e8a31dd84ef0ff959d9765e290fc7a018c3dd4055045361e687e825c4785/DaBlincx/meme-video-gen"
-                    link="https://github.com/DaBlincx/meme-video-gen/"
+                    title={"Meme Video Generator"}
+                    description={"Automatically generates almost youtube-ready meme videos using MoviePy."}
+                    imagelink={"https://opengraph.githubassets.com/9282e8a31dd84ef0ff959d9765e290fc7a018c3dd4055045361e687e825c4785/DaBlincx/meme-video-gen"}
+                    link={"https://github.com/DaBlincx/meme-video-gen/"}
                 />
             </div>
             <Footer />
