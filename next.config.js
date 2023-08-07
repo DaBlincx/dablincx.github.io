@@ -9,6 +9,11 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'opengraph.githubassets.com',
                 port: ''
+            },
+            {
+                protocol: 'https',
+                hostname: 'minecraft.fandom.com',
+                port: ''
             }
         ],
         unoptimized: true,
