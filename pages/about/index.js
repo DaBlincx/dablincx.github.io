@@ -20,7 +20,7 @@ export default function projects() {
             <div className='about-container'>
                 <div className='about-image-container'>
                     <Image
-                        src='https://opengraph.githubassets.com/9282e8a31dd84ef0ff959d9765e290fc7a018c3dd4055045361e687e825c4785/DaBlincx/meme-video-gen'
+                        src='/media/pink_hair_minimalist_main.png'
                         alt='profile picture'
                         width={3000}
                         height={3000}
