@@ -7,6 +7,10 @@ function WindowBar({ linkurl, handleCloseFunction }) {
         handleCloseFunction();
     }
 
+    function handleOpen() {
+        window.open(linkurl, '_blank');
+    }
+
     return (
         <div className="project-element-windowbar-container">
             <div className="project-element-windowbar-minimize">
@@ -14,7 +18,7 @@ function WindowBar({ linkurl, handleCloseFunction }) {
             </div>
             <div className="project-element-windowbar-maximize" onClick={
                 () => {
-                    window.open(linkurl, '_blank');
+                    handleOpen();
                 }
             }>
                 <div className="maximize-icon"></div>
