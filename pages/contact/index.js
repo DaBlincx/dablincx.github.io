@@ -2,10 +2,15 @@ import NavBar from '@/components/_navbar'
 import Footer from '@/components/_footer'
 import Link from "next/link"
 import Image from "next/image"
+import Head from 'next/head'
 
 export default function projects() {
     return (
         <div>
+            <Head>
+                <title>contact | dablincx</title>
+                <meta name="description" content="contact me" />
+            </Head>
             <NavBar/>
             <div className='contact-heading-background'>
                 <div className='contact-heading-container'>

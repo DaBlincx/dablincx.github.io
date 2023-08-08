@@ -2,10 +2,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import NavBar from '@/components/_navbar'
 import Footer from '@/components/_footer'
+import Head from 'next/head'
 
 export default function projects() {
     return (
         <div>
+            <Head>
+                <title>about me | dablincx</title>
+                <meta name="description" content="interesting stuff about me" />
+            </Head>
             <NavBar/>
             <div className='about-heading-background'>
                 <div className='about-heading-container'>

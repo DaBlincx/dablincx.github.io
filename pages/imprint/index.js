@@ -1,10 +1,15 @@
 import NavBar from '@/components/_navbar'
 import Footer from '@/components/_footer'
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default function projects() {
     return (
         <div>
+            <Head>
+                <title>imprint | dablincx</title>
+                <meta name="description" content="legal stuff" />
+            </Head>
             <NavBar/>
             <div className='imprint-content-container'>
                 <div className='imprint-content-title'>

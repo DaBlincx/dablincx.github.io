@@ -1,12 +1,16 @@
-
 import NavBar from '@/components/_navbar'
 import Footer from '@/components/_footer'
 import Link from "next/link"
 import ProjectElement from "@/components/_projectElement"
+import Head from 'next/head'
 
 export default function projects() {
     return (
         <div>
+            <Head>
+                <title>projects | dablincx</title>
+                <meta name="description" content="my projects" />
+            </Head>
             <NavBar/>
             <div className="projects-heading-background">
                 <div className="projects-heading-container">
