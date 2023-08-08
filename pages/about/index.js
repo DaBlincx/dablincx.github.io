@@ -13,7 +13,7 @@ export default function projects() {
                         about me
                     </div>
                     <div className='about-heading-subtitle'>
-                        get to know me! or something idk lol
+                        get to know me! or something idk lol!
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@ export default function projects() {
                     <div className='about-text'>
                         hello, i&#39;m dablincx!<br />
                         <br />
-                        i&#39;m a 16 year old developer from germany. i&#39;m currently in 11th grade and i&#39;m planning on studying computer science after i graduate.<br />
+                        i&#39;m a 16 year old developer from germany. i&#39;m currently in 11th grade and i&#39;m planning on studying computer science or something similar after i graduate.<br />
                         <br />
                         i started programming in 2019 and have been doing it ever since. i&#39;m currently working on a few projects, some of which you can find on my <Link className='about-link-highlight' href='https://github.com/DaBlincx'>github</Link>.<br />
                         <br />

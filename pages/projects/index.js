@@ -27,9 +27,15 @@ export default function projects() {
                 />
                 <ProjectElement
                     title={"Meme Video Generator"}
-                    description={"Automatically generates almost youtube-ready meme videos using MoviePy."}
+                    description={"Automatically generates almost YouTube-ready meme videos using MoviePy."}
                     imagelink={"/media/projects/meme-video-gen.png"}
                     link={"https://github.com/DaBlincx/meme-video-gen/"}
+                />
+                <ProjectElement
+                    title={"Beatsaver.com Map Scraper"}
+                    description={"Downloads all beatmaps from beatsaver.com and saves them to a folder. idk why you'd need this but it exists."}
+                    imagelink={"/media/projects/beatsaver-map-scraper.png"}
+                    link={"https://gist.github.com/DaBlincx/f037bbfb661797f1f670f987c3a8c1e6"}
                 />
             </div>
             <Footer />
