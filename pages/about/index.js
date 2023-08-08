@@ -44,7 +44,9 @@ export default function projects() {
                             />
                         </div></span> and i listen to a lot of different genres but my favorites are dubstep, breakcore and whatever <Link className='about-link-highlight' href='https://soundcloud.com/acloudyskye'>acloudyskye</Link> does.<br />
                         <br />
-                        i also like to play video games, my favorite game is probably <span className='about-minecraft-highlight'>minecraft.</span> 
+                        i also like to play video games, my favorite game is probably <span className='about-minecraft-highlight'>minecraft.</span><br />
+                        <br />
+                        also maybe take the &#34;web design&#34; part not too seriously please lol
                     </div>
                 </div>
             </div>

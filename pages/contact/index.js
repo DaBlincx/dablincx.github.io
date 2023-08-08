@@ -50,12 +50,33 @@ export default function projects() {
                                 src={'/media/mail.svg'}
                                 width={300}
                                 height={300}
-                                alt='discord profile picture'
+                                alt='mail icon'
                             />
                         </div>
                         <div className='contact-email-address'>
                             <Link href='mailto:me@dablincx.dev'>
                                 me@dablincx.dev
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className='contact-element'>
+                    <div className='contact-title'>
+                        LinkedIn
+                    </div>
+                    <div className='contact-email-container'>
+                        <div className='contact-email-image-container'>
+                            <Image
+                                className='contact-email-image'
+                                src={'/media/linkedin.svg'}
+                                width={300}
+                                height={300}
+                                alt='linkedin icon'
+                            />
+                        </div>
+                        <div className='contact-email-address'>
+                            <Link href='https://www.linkedin.com/in/emily-herrmann-288a57284/'>
+                                My LinkedIn
                             </Link>
                         </div>
                     </div>
