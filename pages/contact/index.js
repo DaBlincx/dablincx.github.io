@@ -10,6 +10,8 @@ export default function projects() {
             <Head>
                 <title>contact | dablincx</title>
                 <meta name="description" content="contact me" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
             </Head>
             <NavBar/>
             <div className='contact-heading-background'>

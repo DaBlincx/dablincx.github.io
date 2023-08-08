@@ -9,6 +9,8 @@ export default function projects() {
             <Head>
                 <title>imprint | dablincx</title>
                 <meta name="description" content="legal stuff" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
             </Head>
             <NavBar/>
             <div className='imprint-content-container'>
