@@ -8,8 +8,9 @@
         "start": "next start",
         "export": "next build && next export",
         "lint": "next lint",
-        "gh-deploy": "type nul > out/.nojekyll && gh-pages -d out",
-        "fulldeploy": "npm run export && npm run gh-deploy",
+        "gh-deploy": "gh-pages -d out -t true",
+        "addnojekyll": "type nul > out/.nojekyll",
+        "fulldeploy": "npm run export && npm run addnojekyll && npm run gh-deploy",
         "commitanddeploy": "git add . && git commit -m \"full deploy\" && npm run fulldeploy",
         "localdeploy": "npm run export && serve -s out -l 8080"
     },
