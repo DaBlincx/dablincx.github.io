@@ -99,6 +99,7 @@ a {
     z-index: 100;
     font-size: 1.3rem;
     color: var(--text);
+    border-left: 3px solid var(--accent);
 }
 
 #navbar.navbar-open {
@@ -117,6 +118,7 @@ a {
     opacity: 1;
     border: 3px solid transparent;
     transition: 0.2s;
+    z-index: 100;
 }
 
 #navbar-toggle:hover {
@@ -248,8 +250,9 @@ a {
 }
 
 .projects-heading-background {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background: linear-gradient(to bottom left, var(--background) 0%, var(--tertiary) 100%);
     color: var(--text)
 }
@@ -428,10 +431,12 @@ a {
 }
 
 .about-heading-background {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background: linear-gradient(to bottom right, var(--background) 0%, var(--secondary) 100%);
-    color: var(--text)
+    color: var(--text);
+    z-index: 0;
 }
 
 .about-heading-container {
@@ -490,6 +495,32 @@ a {
     max-width: 50%;
     font-size: 1.25rem;
     padding: 6rem;
+}
+
+.about-music-joke {
+    position: relative;
+    transition: .2s;
+}
+
+.about-music-joke-image-container {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.about-music-joke:hover {
+    /* big white shadow */
+    text-shadow: 2px 2px 5px white 
+}
+
+.about-music-joke:hover .about-music-joke-image-container {
+    display: block;
+}
+
+.about-link-highlight {
+    text-decoration: underline;
 }
 
 .about-minecraft-highlight {
