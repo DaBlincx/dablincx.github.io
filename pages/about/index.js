@@ -20,7 +20,7 @@ export default function projects() {
                         about me
                     </div>
                     <div className='about-heading-subtitle'>
-                        get to know me! or something idk lol!
+                        get to know me!
                     </div>
                 </div>
             </div>
@@ -35,37 +35,35 @@ export default function projects() {
                     />
                 </div>
                 <div className='about-text-container'>
-                    <div className='about-text'>
-                        hello, i&#39;m dablincx!<br />
-                        <br />
-                        i&#39;m a 16 year old developer from germany. i&#39;m currently in 11th grade and i&#39;m planning on studying computer science or something similar after i graduate.<br />
-                        <br />
-                        i started programming in 2019 and have been doing it ever since. i&#39;m currently working on a few projects, some of which you can find on my <Link
-                            className='about-link-highlight'
-                            href='https://github.com/DaBlincx'>
-                            github
-                        </Link>.<br />
-                        <br />
-                        i&#39;m an <span className='about-music-joke'>average music enjoyer<div className='about-music-joke-image-container'>
-                            <Image
-                                src='/media/average_music.gif'
-                                alt='average rock music fan vs average dubstep enjoyer gif'
-                                width={360}
-                                height={360}
-                            />
-                        </div></span> and i listen to a lot of different genres but my favorites are dubstep, breakcore and whatever <Link
-                            className='about-link-highlight'
-                            href='https://soundcloud.com/acloudyskye'>
-                            acloudyskye
-                        </Link> does.<br />
-                        <br />
-                        i also like to play video games, my favorite game is probably <span
-                            className='about-minecraft-highlight'>
-                            minecraft.
-                        </span><br />
-                        <br />
-                        also maybe take the &#34;web design&#34; part not too seriously please lol
-                    </div>
+                    hello, i&#39;m dablincx!<br />
+                    <br />
+                    i&#39;m a 16 year old developer from germany. i&#39;m currently in 11th grade and i&#39;m planning on studying computer science or something similar after i graduate.<br />
+                    <br />
+                    i started programming in 2019 and have been doing it ever since. i&#39;m currently working on a few projects, some of which you can find on my <Link
+                        className='about-link-highlight'
+                        href='https://github.com/DaBlincx'>
+                        github
+                    </Link>.<br />
+                    <br />
+                    i&#39;m an <span className='about-music-joke'>average music enjoyer<div className='about-music-joke-image-container'>
+                        <Image
+                            src='/media/average_music.gif'
+                            alt='average rock music fan vs average dubstep enjoyer gif'
+                            width={360}
+                            height={360}
+                        />
+                    </div></span> and i listen to a lot of different genres but my favorites are dubstep, breakcore and whatever <Link
+                        className='about-link-highlight'
+                        href='https://soundcloud.com/acloudyskye'>
+                        acloudyskye
+                    </Link> does.<br />
+                    <br />
+                    i also like to play video games, my favorite game is probably <span
+                        className='about-minecraft-highlight'>
+                        minecraft.
+                    </span><br />
+                    <br />
+                    also maybe take the &#34;web design&#34; part not too seriously please lol
                 </div>
             </div>
             <Footer />
