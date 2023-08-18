@@ -16,6 +16,7 @@ export default function index() {
             <NavBar />
             <div className='index-background'>
                 <RainContainer />
+                <div></div>
                 <div className='index-heading-container'>
                     <div className='index-heading-title'>
                         dablincx
