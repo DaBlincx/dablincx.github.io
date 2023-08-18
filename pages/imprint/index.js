@@ -25,7 +25,7 @@ export default function projects() {
                     Bruno Herrmann<br />
                     <br />
                     <b>Address:</b><br />
-                    The address will be provided upon request due to privacy reasons.<br />
+                    The address will be provided upon request for privacy reasons.<br />
                     <br />
                     <b>Contact:</b><br />
                     Phone: <Link
