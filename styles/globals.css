@@ -248,6 +248,24 @@ a {
     font-weight: 500;
 }
 
+@media (max-width: 720px) {
+    .index-heading-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+    .index-heading-title {
+        font-size: 3rem;
+        margin: 0;
+    }
+    .index-heading-subtitle {
+        width: 300px;
+        align-self: center;
+    }
+}
+
 .rain-container-box {
     overflow: hidden;
     width: 40%;
@@ -255,6 +273,12 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+@media (max-width: 720px) {
+    .rain-container-box {
+        display: none;
+    }
 }
 
 .projects-heading-background {
@@ -286,6 +310,20 @@ a {
     font-weight: 500;
 }
 
+@media (max-width: 720px) {
+    .project-heading-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+    .project-heading-title {
+        font-size: 3rem;
+        margin: 0;
+    }
+}
+
 .projects-container {
     width: 100%;
     min-height: 100vh;
@@ -313,6 +351,19 @@ a {
     background: #ffffff11;
     border: 1px solid var(--tertiary);
     box-shadow: 5px 5px 5px 0px #00000077;
+}
+
+@media (max-width: 720px) {
+    .projects-container {
+        padding: 2rem;
+        margin: 0;
+    }
+    .project-element-container {
+        min-width: 240px;
+        padding: 2rem;
+        margin: 1rem 0rem;
+        width: 100%;
+    }
 }
 
 /* windows 10 style window titlebar */
@@ -467,7 +518,6 @@ a {
 .about-heading-subtitle {
     font-size: 1.5rem;
     font-weight: 500;
-    transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 720px) {
