@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Head from 'next/head'
 
-export default function projects() {
+export default function contact() {
     return (
         <div>
             <Head>

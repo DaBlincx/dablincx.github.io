@@ -4,7 +4,7 @@ import NavBar from '@/components/_navbar'
 import Footer from '@/components/_footer'
 import Head from 'next/head'
 
-export default function projects() {
+export default function about() {
     return (
         <div>
             <Head>

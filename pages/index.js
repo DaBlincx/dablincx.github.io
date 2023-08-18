@@ -4,7 +4,7 @@ import Footer from '@/components/_footer'
 import RainContainer from '@/components/_rainContainer'
 import Head from 'next/head'
 
-export default function Home() {
+export default function index() {
     return (
         <div>
             <Head>
