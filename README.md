@@ -8,4 +8,4 @@ to export the website to actual static html, run `npm run export` and it will be
 
 ## TODO
 
-- [ ] make mobile version
+- [x] make mobile version
