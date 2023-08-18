@@ -310,20 +310,6 @@ a {
     font-weight: 500;
 }
 
-@media (max-width: 720px) {
-    .project-heading-container {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        text-align: center;
-    }
-    .project-heading-title {
-        font-size: 3rem;
-        margin: 0;
-    }
-}
-
 .projects-container {
     width: 100%;
     min-height: 100vh;
@@ -354,6 +340,17 @@ a {
 }
 
 @media (max-width: 720px) {
+    .projects-heading-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+    .projects-heading-title {
+        font-size: 3rem;
+        margin: 0;
+    }
     .projects-container {
         padding: 2rem;
         margin: 0;
