@@ -41,7 +41,7 @@ export default function projects() {
                                 ❱ DaBlincx ❰
                             </div>
                             <div className='contact-discord-tag'>
-                                dablincx
+                                @dablincx
                             </div>
                         </div>
                     </div>
