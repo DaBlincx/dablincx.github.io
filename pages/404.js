@@ -3,13 +3,6 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 export default function Error404() {
-    useEffect(() => {
-        let validsuburls = ['/about', '/contact', '/projects', '/imprint'];
-        if (validsuburls.includes(window.location.pathname)) {
-            window.location.pathname += '.html';
-            return null;
-        }
-    }, []);
     return (
         <div style={{
             fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue',
