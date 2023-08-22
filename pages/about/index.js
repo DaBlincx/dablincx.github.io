@@ -63,7 +63,7 @@ export default function about() {
                         minecraft.
                     </span><br />
                     <br />
-                    also maybe take the &#34;web design&#34; part not too seriously please lol
+                    also maybe take the &#34;web design&#34; part not too seriously lol
                 </div>
             </div>
             <Footer />
