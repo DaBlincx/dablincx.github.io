@@ -1,6 +1,12 @@
 import Link from 'next/link';
+import Router from 'next/router';
 
 export default function error404() {
+    let validsuburls = ['/about', '/contact', '/projects', '/imprint'];
+    let suburl = Router.asPath;
+    if (validsuburls.includes(suburl)) {
+        Router.push(suburl);
+    }
     return (
         <div style={{
             fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue',
