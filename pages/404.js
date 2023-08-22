@@ -1,7 +1,15 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-export default function error404() {
+export default function Error404() {
+    useEffect(() => {
+        let validsuburls = ['/about', '/contact', '/projects', '/imprint'];
+        if (validsuburls.includes(window.location.pathname)) {
+            window.location.pathname += '.html';
+            return null;
+        }
+    }, []);
     return (
         <div style={{
             fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue',
@@ -29,8 +37,6 @@ export default function error404() {
                 This page could not be found.<br/>
                 Go back to <Link href="/" className='error-404-link'>Home</Link>
             </div>
-        <script>{"let validsuburls = ['/about', '/contact', '/projects', '/imprint'];´\nif (validsuburls.includes(window.location.pathname)) {\n    window.location.pathname += '.html';\n    return null;\n}"}
-        </script>
         </div>
     )
 }
