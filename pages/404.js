@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 
 export default function error404() {
     let validsuburls = ['/about', '/contact', '/projects', '/imprint'];
-    let suburl = Router.asPath;
-    if (validsuburls.includes(suburl)) {
-        Router.push(suburl);
+    if (validsuburls.includes(window.location.pathname)) {
+        window.location.pathname += '.html';
+        return null;
     }
     return (
         <div style={{
