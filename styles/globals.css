@@ -134,6 +134,33 @@ a {
     border-bottom-color: var(--accent);
 }
 
+@media (max-width: 720px) {
+    #navbar-toggle {
+        /* blur the background */
+        backdrop-filter: blur(5px);
+        margin: auto 3rem;
+        padding: 0;
+        position: static;
+        display: flex;
+    }
+    .navbar-toggle-bg {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 12.5vh;
+        z-index: 50;
+    }
+    .navbar-toggle-bg-display {
+        backdrop-filter: blur(3px);
+        box-shadow: 0px 0px 15px 5px #00000077;
+    }
+}
+
 #navbar.navbar-open~#navbar-toggle {
     opacity: 0;
 }

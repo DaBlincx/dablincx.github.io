@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 
 function NavBar({ bgColor }) {
+    const [scrolled, setScrolled] = useState(false);
     const router = useRouter();
     const currentPath = router.pathname;
 
@@ -15,11 +17,28 @@ function NavBar({ bgColor }) {
         navbar.classList.toggle('navbar-open');
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     if (bgColor == null) { bgColor = 'transparent'; }
     return (
         <div style={{ fontSize: '1.3rem' }}>
-            <div id="navbar-toggle" className="" onClick={toggleNavbar}>
-                Menu
+            <div className={scrolled ? "navbar-toggle-bg navbar-toggle-bg-display" : "navbar-toggle-bg"}>
+                <div id="navbar-toggle" className="" onClick={toggleNavbar}>
+                    Menu
+                </div>
             </div>
             <div id="navbar" className="">
                 <div style={{ width: '100%' }}>
