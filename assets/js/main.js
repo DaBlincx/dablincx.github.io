@@ -4,9 +4,52 @@ const currentinput = document.getElementById('currentinput');
 
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-*/\\=%&$#@!?~^()[]{}|<>"\'`.,;:_ ';
 
+const commands = {
+    'help': 'display this help message',
+    'clear': 'clear the terminal screen',
+    'echo': 'display a line of text',
+    'hostname': 'display the hostname of the system',
+    'username': 'display the username of the system',
+    'history': 'display the history of commands',
+    'ls': 'list directory contents',
+    'cd': 'change directory',
+    'mkdir': 'make directory',
+    'touch': 'create a file',
+    'rm': 'remove a file',
+    'mv': 'move a file',
+    'cp': 'copy a file',
+    'cat': 'read a file',
+    'pwd': 'print working directory',
+    'exit': 'exit the terminal'
+}
 
 let hostname = 'dablincx.dev';
 let username = 'guest';
+let history = [];
+let reversehistoryindex = 0;
+
+let path = `/home/guest`;
+
+let root = {
+    name: 'root',
+    type: 'dir',
+    path: '/',
+    children: [
+        {
+            name: 'home',
+            type: 'dir',
+            path: '/home',
+            children: [
+                {
+                    name: 'guest',
+                    type: 'dir',
+                    path: '/home/guest',
+                    children: []
+                }
+            ]
+        }
+    ]
+}
 
 const prompt = () => {
     return `${username}@${hostname}:~$`;
@@ -39,6 +82,21 @@ window.addEventListener('keydown', (e) => {
         case 'Tab':
             currentinput.innerHTML += '&nbsp;&nbsp;&nbsp;&nbsp;';
             break;
+        case 'ArrowUp':
+            if (reversehistoryindex < history.length) {
+                reversehistoryindex++;
+                currentinput.innerHTML = history[history.length - reversehistoryindex];
+            }
+            break;
+        case 'ArrowDown':
+            if (reversehistoryindex > 1) {
+                reversehistoryindex--;
+                currentinput.innerHTML = history[history.length - reversehistoryindex];
+            } else if (reversehistoryindex == 1) {
+                reversehistoryindex--;
+                currentinput.innerHTML = '';
+            }
+            break;
         default:
             if (chars.includes(e.key)) {
                 currentinput.innerHTML += e.key;
@@ -49,22 +107,24 @@ window.addEventListener('keydown', (e) => {
 });
 
 function runCommand(cmd) {
+    let cmdlst = [];
+    let cmd1 = '';
     // split the command into an array
-    cmd = cmd.split(' ');
+    cmdlst = cmd.split(' ');
 
     // get the first item in the array
-    cmd = cmd[0];
+    cmd1 = cmdlst[0];
+
+    if (cmd1 != '') {
+        history.push(cmd);
+    }
 
     // switch case for clean code
-    switch (cmd) {
+    switch (cmd1) {
+        case '':
+            break;
         case 'help':
-            text.innerHTML += 'help: shows this help message<br>';
-            text.innerHTML += 'clear: clears the screen<br>';
-            text.innerHTML += 'echo: echos the input<br>';
-            text.innerHTML += 'hostname: shows the hostname<br>';
-            text.innerHTML += 'username: shows the username<br>';
-            text.innerHTML += 'color: sets the color of the text<br>';
-            text.innerHTML += 'background: sets the background color<br>';
+            handleHelp(cmdlst)
             break;
         case 'clear':
             text.innerHTML = '';
@@ -79,10 +139,57 @@ function runCommand(cmd) {
         case 'username':
             text.innerHTML += username + '<br>';
             break;
+        case 'history':
+            text.innerHTML += history.join('<br>') + '<br>';
+            break;
+        case 'ls':
+            handleLs(cmdlst);
+            break;
+        case 'cd':
+            handleCd(cmdlst);
+            break;
+        case 'mkdir':
+            handleMkdir(cmdlst);
+            break;
+        case 'touch':
+            handleTouch(cmdlst);
+            break;
+        case 'rm':
+            handleRm(cmdlst);
+            break;
+        case 'mv':
+            handleMv(cmdlst);
+            break;
+        case 'cp':
+            handleCp(cmdlst);
+            break;
+        case 'cat':
+            handleCat(cmdlst);
+            break;
+        case 'pwd':
+            text.innerHTML += path + '<br>';
+            break;
+        case 'exit':
+            window.close();
+            break;
         default:
             text.innerHTML += 'command ' + cmd + ' not found<br>';
     }
 
     text.innerHTML += prompt();
 }
-            
+
+function handleHelp(cmdlst) {
+    if (cmdlst.length == 1) {
+        text.innerHTML += 'Available commands:<br>';
+        for (const [key, value] of Object.entries(commands)) {
+            text.innerHTML += `${key}: ${value}<br>`;
+        }
+    } else {
+        try {
+            text.innerHTML += cmdlst[1] + ": " + commands[cmdlst[1]] + '<br>';
+        } catch (error) {
+            text.innerHTML += 'command ' + cmdlst[1] + ' not found<br>';
+        }
+    }
+}
