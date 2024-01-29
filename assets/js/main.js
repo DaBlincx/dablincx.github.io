@@ -20,6 +20,8 @@ const commands = {
     'cp': 'copy a file',
     'cat': 'read a file',
     'pwd': 'print working directory',
+    'source': 'reload the page',
+    'color': 'change the color of the terminal',
     'exit': 'exit the terminal'
 }
 
@@ -29,6 +31,7 @@ let history = [];
 let reversehistoryindex = 0;
 
 let path = `/home/guest`;
+
 
 let root = {
     name: 'root',
@@ -52,8 +55,16 @@ let root = {
 }
 
 const prompt = () => {
-    return `${username}@${hostname}:~$`;
+    let promptpath;
+    if (path == `/home/${username}`) {
+        promptpath = '~';
+    } else {
+        promptpath = path;
+    }
+    return `${username}@${hostname}:${promptpath}$`;
 }
+
+text.innerHTML += "welcome to dablincx.dev!<br>run 'help' for a list of commands<br><br>";
 
 text.innerHTML += prompt();
 
@@ -171,6 +182,15 @@ function runCommand(cmd) {
         case 'exit':
             window.close();
             break;
+        case 'sudo':
+            text.innerHTML += 'nice try fbi<br>';
+            break;
+        case 'source':
+            window.location.reload();
+            break;
+        case 'color':
+            handleColor(cmdlst);
+            break;
         default:
             text.innerHTML += 'command ' + cmd + ' not found<br>';
     }
@@ -182,7 +202,7 @@ function handleHelp(cmdlst) {
     if (cmdlst.length == 1) {
         text.innerHTML += 'Available commands:<br>';
         for (const [key, value] of Object.entries(commands)) {
-            text.innerHTML += `${key}: ${value}<br>`;
+            text.innerHTML += `- ${key}: ${value}<br>`;
         }
     } else {
         try {
@@ -210,6 +230,19 @@ function handleHistory(cmdlst) {
         history = [];
     } else if (cmdlst[1] == '-h') {
         text.innerHTML += 'history: ' + commands['history'] + '<br>';
+    }
+}
+
+function handleColor(cmdlst) {
+    if (cmdlst.length == 1) {
+        text.innerHTML += 'color: ' + commands['color'] + '<br>';
+    } else if (cmdlst.length == 2) {
+        document.body.style.color = cmdlst[1];
+    } else if (cmdlst.length == 3) {
+        document.body.style.color = cmdlst[1];
+        document.body.style.backgroundColor = cmdlst[2];
+    } else {
+        text.innerHTML += 'too many arguments<br>';
     }
 }
 
