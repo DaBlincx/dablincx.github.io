@@ -130,8 +130,7 @@ function runCommand(cmd) {
             text.innerHTML = '';
             break;
         case 'echo':
-            cmd.shift();
-            text.innerHTML += cmd.join(' ') + '<br>';
+            handleEcho(cmdlst);
             break;
         case 'hostname':
             text.innerHTML += hostname + '<br>';
@@ -140,7 +139,7 @@ function runCommand(cmd) {
             text.innerHTML += username + '<br>';
             break;
         case 'history':
-            text.innerHTML += history.join('<br>') + '<br>';
+            handleHistory(cmdlst);
             break;
         case 'ls':
             handleLs(cmdlst);
@@ -191,5 +190,25 @@ function handleHelp(cmdlst) {
         } catch (error) {
             text.innerHTML += 'command ' + cmdlst[1] + ' not found<br>';
         }
+    }
+}
+
+function handleEcho(cmdlst) {
+    if (cmdlst.length == 1) {
+        text.innerHTML += '<br>';
+    } else {
+        text.innerHTML += cmdlst.slice(1).join(' ') + '<br>';
+    }
+}
+
+function handleHistory(cmdlst) {
+    if (cmdlst.length == 1) {
+        for (let i = 0; i < history.length; i++) {
+            text.innerHTML += `${i + 1} ${history[i]}<br>`;
+        }
+    } else if (cmdlst[1] == '-c') {
+        history = [];
+    } else if (cmdlst[1] == '-h') {
+        text.innerHTML += 'history: ' + commands['history'] + '<br>';
     }
 }
