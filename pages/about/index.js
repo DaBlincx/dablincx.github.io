@@ -5,6 +5,9 @@ import Footer from '@/components/_footer'
 import Head from 'next/head'
 
 export default function about() {
+
+    const age = Math.floor((Date.now() - new Date('2007-01-03').getTime()) / (365.25 * 24 * 60 * 60 * 1000))
+
     return (
         <div>
             <Head>
@@ -37,7 +40,7 @@ export default function about() {
                 <div className='about-text-container'>
                     hello, i&#39;m dablincx!<br />
                     <br />
-                    i&#39;m a 16 year old developer from germany. i&#39;m currently in 11th grade and i&#39;m planning on studying computer science or something similar after i graduate.<br />
+                    i&#39;m a <span id='agedisplay'>{age}</span> year old developer from germany. i&#39;m currently in 11th grade and i&#39;m planning on studying computer science or something similar after i graduate.<br />
                     <br />
                     i started programming in 2019 and have been doing it ever since. i&#39;m currently working on a few projects, some of which you can find on my <Link
                         className='about-link-highlight'
@@ -65,6 +68,12 @@ export default function about() {
                     <br />
                     also maybe take the &#34;web design&#34; part not too seriously lol
                 </div>
+                <script dangerouslySetInnerHTML={{__html: `
+                    // 🤓 why u lookin here u nerd
+                    const ageElement = document.getElementById('agedisplay');
+                    const currentAge = Math.floor((Date.now() - new Date('2007-01-03').getTime()) / (365.25 * 24 * 60 * 60 * 1000));
+                    ageElement.textContent = currentAge;
+                `}} />
             </div>
             <Footer />
         </div>
