@@ -212,3 +212,35 @@ function handleHistory(cmdlst) {
         text.innerHTML += 'history: ' + commands['history'] + '<br>';
     }
 }
+
+function handleLs(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
+
+function handleCd(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
+
+function handleMkdir(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
+
+function handleTouch(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
+
+function handleRm(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
+
+function handleMv(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
+
+function handleCp(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
+
+function handleCat(cmdlst) {
+    text.innerHTML += "not yet implemented" + '<br>';
+}
