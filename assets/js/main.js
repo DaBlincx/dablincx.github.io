@@ -25,6 +25,10 @@ const commands = {
     'exit': 'exit the terminal'
 }
 
+function ghlnk(project) {
+    return '<a href=\"https://github.com/dablincx/' + project + '\">https://github.com/dablincx/' + project + '</a>'
+}
+
 let hostname = 'dablincx.dev';
 let username = 'guest';
 let history = [];
@@ -32,26 +36,21 @@ let reversehistoryindex = 0;
 
 let path = `/home/guest`;
 
-
 let root = {
-    name: 'root',
-    type: 'dir',
-    path: '/',
-    children: [
-        {
-            name: 'home',
-            type: 'dir',
-            path: '/home',
-            children: [
-                {
-                    name: 'guest',
-                    type: 'dir',
-                    path: '/home/guest',
-                    children: []
-                }
-            ]
+    'home': {
+        'guest': {
+            'projects': {
+                'dablincx.dev.txt': 'dablincx.dev\n\nthis is my portfolio website (you are using it right now)\ni created it because i want a cool website where i can show some of my stuff but i absolutely hate frontend development so i decided to make a terminal website instead\n\n' + ghlnk('dablincx.github.io'),
+
+                'nethax.txt': 'nethax\n\nnethax is a fake hacking simulation tool similar to the linux programm \'hollywood\' but slightly worse and developed on macos which means it has limited functionality on other operating systems\n(for example the wifi scanning thingy uses a macos utility called airport and i was too lazy to implement something similar on any other os)\ni dont even know if it even works on modern python versions because i havent updated it in soo long\n\n' + ghlnk('nethax'),
+
+                'zynx.txt': 'zynx\n\nzynx is a simple webbrowser written in python using pyqt5\nit is not very good and i dont recommend using it\nit also has only one tab and no bookmarks or anything like that\nits stupid to even try it out (please dont) (its also very not up to date with anything)\n\n' + ghlnk('zynx'),
+
+                'meme-video-gen': 'meme-video-gen\n\npython script that generates a meme compilation video from a bunch of videos\nmaybe ill add auto upload to youtube someday\n\n' + ghlnk('meme-video-gen'),
+            },
+            'info.txt': 'hi!\nthis is a semi interactive terminal portfolio website i made out of boredom and because i wanted to try something new.\ni hope you enjoy your stay!'
         }
-    ]
+    }
 }
 
 const prompt = () => {
@@ -250,8 +249,59 @@ function handleLs(cmdlst) {
     text.innerHTML += "not yet implemented" + '<br>';
 }
 
+function cd(cdpathlst, newpath, recursions=0) {
+    // cdpathlst is a list
+    // function that goes into cdpathlst[0] and removes that element from the list
+    // then calls itself with the new list
+    // if cdpathlst is empty, return the current full path
+    // if cdpathlst[0] is .., go back one directory
+    // if cdpathlst[0] is ., do nothing
+    // if cdpathlst[0] is a directory, go into that directory
+
+    let current = root;
+    let newpathlst = [];
+
+    if (recursions == 0 && cdpathlst.length == 0) {
+        return path;
+    }
+
+    // check if cdpathlst[0] is a valid directory
+
+    if (cdpathlst[0] == '..') {
+        // go back one directory
+        newpathlst = path.split('/');
+        newpathlst.pop();
+        newpath = newpathlst.join('/');
+        return cd(cdpathlst.slice(1), newpath, recursions + 1);
+    } else if (cdpathlst[0] == '.') {
+        // do nothing
+        return cd(cdpathlst.slice(1), path, recursions + 1);
+    } else if (cdpathlst[0] in current) {
+        // go into that directory
+        newpath = path + '/' + cdpathlst[0];
+        return cd(cdpathlst.slice(1), newpath, recursions + 1);
+    } else {
+        // directory not found
+        return 'directory not found';
+    }
+
+}
+
+
 function handleCd(cmdlst) {
-    text.innerHTML += "not yet implemented" + '<br>';
+    let newpath = '';
+    let cdpathlst = [];
+    if (cmdlst.length == 1) {
+        path = `/home/${username}`;
+    } else {
+        cdpathlst = cmdlst[1].split('/');
+        newpath = cd(cdpathlst, path);
+        if (newpath == 'directory not found') {
+            text.innerHTML += 'directory not found<br>';
+        } else {
+            path = newpath;
+        }
+    }
 }
 
 function handleMkdir(cmdlst) {

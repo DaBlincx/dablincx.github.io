@@ -5,6 +5,11 @@ body {
     background-color: #000;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 #container {
     position: absolute;
     top: 0;
