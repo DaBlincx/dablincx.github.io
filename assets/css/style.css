@@ -17,7 +17,7 @@ body {
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: #fff;
-    color: var(--text);
+    color: var(--background);
     font-size: var(--fontsize-text);
 }
 
@@ -56,7 +56,6 @@ a:active {
 }
 
 .container {
-    background: linear-gradient(0deg, var(--background), #000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,3 +93,24 @@ a:active {
     line-height: 36px;
 }
 
+.construction-bar {
+  background: repeating-linear-gradient(
+    -45deg,           /* angle of the gradient */
+    black,           /* start color */
+    black 10px,      /* end color for the first stripe */
+    yellow 10px,     /* start color for the second stripe */
+    yellow 20px      /* end color for the second stripe */
+  );
+  height: 40px;
+  width: 100vw;
+}
+
+.cb-top {
+  position: fixed;
+  top: 20px;
+}
+
+.cb-bottom {
+  position: fixed;
+  bottom: 20px;
+}
